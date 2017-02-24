@@ -51,6 +51,40 @@ public class Tester
         else
             return x + fun7(x - 1);
     }
+    
+    
+
+    //problem 9
+    //before: 11
+    //after: 11
+    public static int wacky(int x, int y)
+    {
+        if(x <= 1)
+            return y;
+        else
+            return wacky(x - 1,y - 1) + y;
+    }
+
+    //problem 10
+    //before: 8
+    //after: 8
+    public static int go(int x, int y)
+    {
+        if(x <= 1)
+            return y;
+        else
+            return go(x - 1,y) + y;
+    }
+
+    //problem 11
+    //before: pacmancman
+    //after: pacmancman
+    public static String wow(String s, int pos)
+    {
+        if(pos > s.length())
+            return s.substring(0, s.length()/2);
+        else
+            return s + wow(s.substring(pos), pos + 1);
+    }
 
 }
-
